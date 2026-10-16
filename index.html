@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ESP32 RFID Controller | Firmware Setup</title>
+
+  <script
+    type="module"
+    src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module">
+  </script>
+
+  <style>
+    :root {
+      font-family: Arial, sans-serif;
+      color: #142334;
+      background: #f6f8fa;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 40px 16px;
+    }
+
+    main {
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      border: 1px solid #dce3eb;
+      border-radius: 15px;
+      padding: 35px;
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+
+    h2 {
+      font-size: 19px;
+      margin-top: 30px;
+    }
+
+    p, li {
+      line-height: 1.6;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    .muted {
+      color: #566677;
+    }
+
+    .notice {
+      border-left: 4px solid #e19f2b;
+      background: #fff8e6;
+      padding: 12px 16px;
+      border-radius: 4px;
+    }
+
+    .button {
+      background: #1456b6;
+      border: 0;
+      border-radius: 9px;
+      padding: 14px 24px;
+      color: white;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    esp-web-install-button {
+      --esp-tools-button-color: #1456b6;
+      --esp-tools-button-text-color: #fff;
+    }
+
+    .foot {
+      font-size: 13px;
+      color: #566677;
+      border-top: 1px solid #dde3ea;
+      margin-top: 25px;
+      padding-top: 18px;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+
+    <h1>ESP32 RFID Controller</h1>
+
+    <p class="muted">
+      USB firmware installation for RFID-controlled
+      linear actuators.
+    </p>
+
+    <h2>Install in four steps</h2>
+
+    <ol>
+      <li>
+        Use a Windows, macOS or Linux computer with
+        <strong>Google Chrome or Microsoft Edge</strong>.
+      </li>
+
+      <li>
+        Disconnect the actuator motor power before updating.
+        Connect the ESP32 to the computer using a
+        <strong>data-capable USB cable</strong>.
+      </li>
+
+      <li>
+        Click <strong>Install Firmware</strong>,
+        select the ESP32 serial port and follow
+        the instructions.
+      </li>
+
+      <li>
+        Wait until installation is complete.
+        Disconnect and reconnect the ESP32,
+        then test according to the device manual.
+      </li>
+    </ol>
+
+    <div class="notice">
+      <strong>Important:</strong>
+      Disconnect the actuator power supply before
+      installing firmware. Keep the ESP32 connected
+      via USB until installation is complete.
+    </div>
+
+    <h2>Firmware installation</h2>
+
+    <esp-web-install-button manifest="./manifest.json">
+
+      <button class="button" slot="activate">
+        Install Firmware
+      </button>
+
+      <span slot="unsupported">
+        This browser does not support serial installation.
+        Use the latest desktop Chrome or Edge.
+      </span>
+
+      <span slot="not-allowed">
+        Open this installer from an HTTPS website.
+      </span>
+
+    </esp-web-install-button>
+
+    <p class="foot">
+      This installer must be hosted over HTTPS,
+      for example using GitHub Pages.
+      Do not open the HTML file directly
+      from your computer.
+
+      USB drivers may be required.
+
+      Installing firmware may overwrite existing
+      device settings.
+    </p>
+
+  </main>
+</body>
+</html>

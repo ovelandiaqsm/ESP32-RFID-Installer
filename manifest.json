@@ -1,0 +1,17 @@
+
+{
+  "name": "ESP32 RFID Linear Actuator Controller",
+  "version": "1.0.0",
+  "new_install_prompt_erase": false,
+  "builds": [
+    {
+      "chipFamily": "ESP32",
+      "parts": [
+        {
+          "path": "firmware/ESP32_RFID_Actuator.ino.merged.bin",
+          "offset": 0
+        }
+      ]
+    }
+  ]
+}
